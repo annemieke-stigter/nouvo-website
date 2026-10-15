@@ -96,6 +96,7 @@
   form .btn{color:var(--white);border-color:var(--white);justify-self:center;margin-top:6px}
   form .btn:hover{background:var(--white);color:var(--olive)}
   form .btn:disabled{opacity:.6;cursor:wait}
+  .h-captcha{display:flex;justify-content:center;min-height:78px}
   .form-status{text-align:center;min-height:1.4em;font-size:16px;margin:0}
 
   footer{background:var(--olive-dark);color:var(--blush);text-align:center;font-size:14px;padding:18px 16px}
@@ -265,6 +266,7 @@
         <div><label for="name">Name</label><input id="name" name="name" type="text" required autocomplete="name"></div>
         <div><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email"></div>
         <div><label for="message">Message</label><textarea id="message" name="message" required></textarea></div>
+        <div class="h-captcha" data-captcha="true"></div>
         <button class="btn" type="submit">Send message</button>
         <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
       </form>
@@ -281,6 +283,8 @@
   const status = document.getElementById('form-status');
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
+    const captcha = form.querySelector('textarea[name=h-captcha-response]');
+    if (!captcha || !captcha.value) { status.textContent = 'Please complete the captcha first.'; return; }
     const btn = form.querySelector('button');
     btn.disabled = true; status.textContent = 'Sending…';
     try {
@@ -294,8 +298,9 @@
       else { status.textContent = 'Something went wrong. Please try again or give me a call.'; }
     } catch (err) {
       status.textContent = 'Something went wrong. Please try again or give me a call.';
-    } finally { btn.disabled = false; }
+    } finally { btn.disabled = false; if (window.hcaptcha) hcaptcha.reset(); }
   });
 </script>
+<script src="https://web3forms.com/client/script.js" async defer></script>
 </body>
 </html>
