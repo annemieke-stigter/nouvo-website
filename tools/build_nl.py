@@ -50,6 +50,7 @@ EXACT = [
     ("status.textContent = 'Thank you! Your message has been sent.';", "status.textContent = 'Dankjewel! Je bericht is verstuurd.';"),
     ("status.textContent = 'Something went wrong. Please try again or give me a call.';", "status.textContent = 'Er ging iets mis. Probeer het opnieuw of bel me even.';"),
     ('<strong>Phone</strong>', '<strong>Telefoon</strong>'),
+    ("const MORE = 'Read more', LESS = 'Show less';", "const MORE = 'Lees meer', LESS = 'Lees minder';"),
 ]
 
 # Text nodes: English start of the text -> full Dutch text.

@@ -131,6 +131,10 @@
   .review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:56px}
   .badge{width:60px;height:66px;stroke:var(--olive);fill:none;stroke-width:1.8;stroke-linejoin:round;margin-bottom:22px}
   .review p{margin:0;font-size:16px;line-height:1.65}
+  .js .review.clamp blockquote{cursor:pointer}
+  .js .review.clamp blockquote p{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;line-clamp:3;overflow:hidden}
+  .more{margin-top:10px;padding:6px 0;min-height:32px;background:none;border:0;font:inherit;font-size:15px;font-weight:600;color:var(--ink);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+  .more:hover{color:var(--olive)}
   .reviews .cta{text-align:right;margin-top:36px;padding-bottom:30px}
 
   /* Contact */
@@ -339,6 +343,28 @@
 <footer>© <span id="year">2026</span> Nouvo Consultancy · Annemieke</footer>
 
 <script>
+  // Reviews: show 3 lines, expand on click.
+  (function(){
+    const MORE = 'Lees meer', LESS = 'Lees minder';
+    document.documentElement.classList.add('js');
+    document.querySelectorAll('.review').forEach((fig) => {
+      const quote = fig.querySelector('blockquote');
+      const text = quote.querySelector('p');
+      fig.classList.add('clamp');
+      if (text.scrollHeight <= text.clientHeight + 2) { fig.classList.remove('clamp'); return; }
+      const btn = document.createElement('button');
+      btn.type = 'button'; btn.className = 'more'; btn.textContent = MORE;
+      btn.setAttribute('aria-expanded', 'false');
+      const toggle = () => {
+        const open = fig.classList.toggle('clamp') === false;
+        btn.textContent = open ? LESS : MORE;
+        btn.setAttribute('aria-expanded', String(open));
+      };
+      btn.addEventListener('click', toggle);
+      quote.addEventListener('click', () => { if (fig.classList.contains('clamp')) toggle(); });
+      fig.appendChild(btn);
+    });
+  })();
   document.getElementById('year').textContent = new Date().getFullYear();
   const form = document.getElementById('contact-form');
   const status = document.getElementById('form-status');
