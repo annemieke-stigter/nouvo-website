@@ -81,7 +81,7 @@ TEXT = [
     ("We’re often so used to thinking", "We zijn vaak zo gewend om ons leven te doordenken, dat we vergeten dat er zoveel meer is om naar te luisteren."),
     ("For me, coaching isn’t about fixing you", "Voor mij gaat coaching niet over jou repareren of vertellen wat je moet doen. Het gaat simpelweg om ruimte maken om te vertragen, nieuwsgierig te worden naar je patronen en opnieuw contact te maken met wat er écht toe doet voor jou."),
     ("Let’s connect!", "Laten we kennismaken!"),
-    ("Coaching approaches", "Mijn manier van coachen"),
+    ("How I like to work", "Zo werk ik graag"),
     ("Cognitive", "Cognitief"),
     ("The stories you tell yourself", "De verhalen die je jezelf vertelt, bepalen meer dan je misschien denkt. Samen onderzoeken we de gedachten en overtuigingen achter je keuzes, waar ze vandaan komen en waar er ruimte is om dingen anders te zien en nieuwe keuzes te maken."),
     ("Somatic", "Somatisch"),
