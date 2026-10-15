@@ -6,6 +6,9 @@
 <title>Cognitive &amp; Systemic Coaching | Annemieke – Nouvo Consultancy</title>
 <meta name="description" content="Cognitive and systemic coaching with Annemieke. Single sessions, a 6 months program or a year program with family constellation. In person, online or outdoors.">
 <link rel="canonical" href="https://nouvoconsultancy.com/">
+<link rel="alternate" hreflang="en" href="https://nouvoconsultancy.com/">
+<link rel="alternate" hreflang="nl" href="https://nouvoconsultancy.com/nl/">
+<link rel="alternate" hreflang="x-default" href="https://nouvoconsultancy.com/">
 <meta name="theme-color" content="#717254">
 <meta name="robots" content="index,follow">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -78,8 +81,15 @@
   .btn{display:inline-block;font-family:var(--body);font-size:15px;letter-spacing:.06em;text-transform:uppercase;text-decoration:underline;text-underline-offset:3px;color:var(--ink);border:1.5px solid var(--olive);border-radius:12px;padding:8px 22px;background:transparent;cursor:pointer;transition:background .2s,color .2s}
   .btn:hover{background:var(--olive);color:var(--cream)}
 
+  /* Language switch */
+  .lang{position:absolute;top:20px;right:max(20px,env(safe-area-inset-right,0px));display:flex;gap:4px;background:var(--white);border:1.5px solid var(--olive);border-radius:999px;padding:4px;z-index:5}
+  .lang a{display:flex;align-items:center;gap:6px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.04em;color:var(--ink);padding:6px 12px;border-radius:999px;min-height:32px}
+  .lang a[aria-current="page"]{background:var(--olive);color:var(--white)}
+  .lang a:not([aria-current]):hover{background:var(--blush)}
+  .lang svg{width:20px;height:14px;border-radius:2px;flex-shrink:0;box-shadow:0 0 0 1px rgba(0,0,0,.12)}
+
   /* Hero */
-  .hero{padding:110px 0 90px}
+  .hero{padding:110px 0 90px;position:relative}
   .hero-top{display:grid;grid-template-columns:400px 1fr;gap:48px;align-items:center}
   .blob{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover}
   .hero h1{font-weight:800;font-size:clamp(38px,5.2vw,68px);line-height:1.02;text-align:center;letter-spacing:-.01em}
@@ -142,7 +152,6 @@
   form .btn{color:var(--white);border-color:var(--white);justify-self:center;margin-top:6px}
   form .btn:hover{background:var(--white);color:var(--olive)}
   form .btn:disabled{opacity:.6;cursor:wait}
-  .h-captcha{display:flex;justify-content:center;min-height:78px}
   .form-status{text-align:center;min-height:1.4em;font-size:16px;margin:0}
 
   footer{background:var(--olive-dark);color:var(--blush);text-align:center;font-size:14px;padding:18px 16px}
@@ -174,9 +183,13 @@
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="hero">
+  <nav class="lang" aria-label="Language">
+    <a href="/nl/" hreflang="nl" lang="nl"><svg viewBox="0 0 9 6" aria-hidden="true"><rect width="9" height="6" fill="#21468B"/><rect width="9" height="4" fill="#fff"/><rect width="9" height="2" fill="#AE1C28"/></svg>NL</a>
+    <a href="/" hreflang="en" lang="en" aria-current="page"><svg viewBox="0 0 60 30" aria-hidden="true"><clipPath id="gbt"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#gbt)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></svg>EN</a>
+  </nav>
   <div class="wrap">
     <div class="hero-top">
-      <img class="blob" src="img/hero.webp" width="408" height="406" fetchpriority="high" alt="Annemieke smiling in a white blouse, standing by a wooden fence in a meadow">
+      <img class="blob" src="/img/hero.webp" width="408" height="406" fetchpriority="high" alt="Annemieke smiling in a white blouse, standing by a wooden fence in a meadow">
       <h1>What if you got curious, about what you’re not seeing yet?</h1>
     </div>
     <p>Hi, I'm Annemieke. I help you uncover what's really driving your choices, through cognitive and systemic work. We look at the patterns that may be holding you back, and find a way forward that feels right for you.</p>
@@ -234,7 +247,7 @@
   <div class="wrap about-grid">
     <div class="about-left">
       <h2>About me</h2>
-      <img class="about-photo" src="img/about.webp" width="326" height="445" decoding="async" loading="lazy" alt="Portrait of Annemieke laughing in a field">
+      <img class="about-photo" src="/img/about.webp" width="326" height="445" decoding="async" loading="lazy" alt="Portrait of Annemieke laughing in a field">
     </div>
     <div class="about-text">
       <p>Hey! Good to see you here.</p>
@@ -252,22 +265,22 @@
     <h2>Coaching approaches</h2>
     <div class="approach-grid">
       <article class="approach">
-        <img src="img/cognitive.webp" width="252" height="267" decoding="async" alt="Woman sitting on a hill looking out over a city at sunrise" loading="lazy">
+        <img src="/img/cognitive.webp" width="252" height="267" decoding="async" alt="Woman sitting on a hill looking out over a city at sunrise" loading="lazy">
         <h3>Cognitive</h3>
         <p>The stories you tell yourself shape more than you might realize. Together, we explore the thoughts and beliefs behind your choices, where they may have come from, and where there is space to see things differently and make new choices.</p>
       </article>
       <article class="approach">
-        <img src="img/somatic.webp" width="249" height="267" decoding="async" alt="Close-up of apples and leaves" loading="lazy">
+        <img src="/img/somatic.webp" width="249" height="267" decoding="async" alt="Close-up of apples and leaves" loading="lazy">
         <h3>Somatic</h3>
         <p>Not everything can be understood by thinking it through. Through breathwork, visualization and body awareness, we slow down and listen to what your body might be telling you, sometimes before you have the words for it.</p>
       </article>
       <article class="approach">
-        <img src="img/systemic.webp" width="247" height="267" decoding="async" alt="Old family photographs spread on a table" loading="lazy">
+        <img src="/img/systemic.webp" width="247" height="267" decoding="async" alt="Old family photographs spread on a table" loading="lazy">
         <h3>Systemic</h3>
         <p>Some patterns make more sense when we look beyond the individual. We explore how family history, relationships and the systems you are part of may shape the way you think, feel and act. Becoming aware of these patterns creates space to decide what still belongs to you, and what you’re ready to leave behind.</p>
       </article>
       <article class="approach">
-        <img src="img/outdoor.webp" width="248" height="267" decoding="async" alt="Misty pine forest" loading="lazy">
+        <img src="/img/outdoor.webp" width="248" height="267" decoding="async" alt="Misty pine forest" loading="lazy">
         <h3>Outdoor</h3>
         <p>Sometimes, stepping outside helps something shift inside. Away from screens, routines and four walls, nature creates space to slow down, clear your mind and reconnect with yourself. Walking side by side can also make it easier to open up and let the conversation unfold naturally.</p>
       </article>
@@ -314,12 +327,11 @@
         <div><label for="name">Name</label><input id="name" name="name" type="text" required autocomplete="name"></div>
         <div><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email"></div>
         <div><label for="message">Message</label><textarea id="message" name="message" required></textarea></div>
-        <div class="h-captcha" data-captcha="true"></div>
         <button class="btn" type="submit">Send message</button>
         <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
       </form>
     </div>
-    <img class="house" src="img/house.webp" width="543" height="584" decoding="async" alt="Brick farmhouse with an olive tree in a pot and a wooden bench" loading="lazy">
+    <img class="house" src="/img/house.webp" width="543" height="584" decoding="async" alt="Brick farmhouse with an olive tree in a pot and a wooden bench" loading="lazy">
   </div>
 </section>
 </main>
@@ -332,8 +344,6 @@
   const status = document.getElementById('form-status');
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const captcha = form.querySelector('textarea[name=h-captcha-response]');
-    if (!captcha || !captcha.value) { status.textContent = 'Please complete the captcha first.'; return; }
     const btn = form.querySelector('button');
     btn.disabled = true; status.textContent = 'Sending…';
     try {
@@ -347,19 +357,8 @@
       else { status.textContent = 'Something went wrong. Please try again or give me a call.'; }
     } catch (err) {
       status.textContent = 'Something went wrong. Please try again or give me a call.';
-    } finally { btn.disabled = false; if (window.hcaptcha) hcaptcha.reset(); }
+    } finally { btn.disabled = false; }
   });
-</script>
-<script>
-  // Load the Web3Forms/hCaptcha script only when the contact form comes near the screen.
-  (function(){
-    let loaded=false;
-    const load=()=>{ if(loaded) return; loaded=true; const sc=document.createElement('script'); sc.src='https://web3forms.com/client/script.js'; sc.async=true; document.body.appendChild(sc); };
-    const target=document.getElementById('contact');
-    if('IntersectionObserver' in window){ const io=new IntersectionObserver(e=>{ if(e.some(x=>x.isIntersecting)){ load(); io.disconnect(); } },{rootMargin:'600px'}); io.observe(target); }
-    else load();
-    form.addEventListener('focusin', load, {once:true});
-  })();
 </script>
 </body>
 </html>
