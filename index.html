@@ -3,19 +3,51 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Annemieke | Nouvo Consultancy – Cognitive & Systemic Coaching</title>
+<title>Annemieke | Nouvo Consultancy – Cognitive &amp; Systemic Coaching</title>
 <meta name="description" content="Annemieke helps you uncover what's really driving your choices, through cognitive and systemic coaching. Single sessions, a 6 months program or a year program.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="canonical" href="https://nouvoconsultancy.com/">
+<meta name="theme-color" content="#717254">
+<meta name="robots" content="index,follow">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nouvo Consultancy">
+<meta property="og:title" content="What if you got curious, about what you’re not seeing yet?">
+<meta property="og:description" content="Cognitive and systemic coaching with Annemieke. Single sessions, a 6 months program or a year program, in person, online or outdoors.">
+<meta property="og:url" content="https://nouvoconsultancy.com/">
+<meta property="og:image" content="https://nouvoconsultancy.com/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Annemieke, coach at Nouvo Consultancy">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/newsreader.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/img/hero.webp" as="image" type="image/webp" fetchpriority="high">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Nouvo Consultancy",
+  "url": "https://nouvoconsultancy.com/",
+  "image": "https://nouvoconsultancy.com/img/og-image.jpg",
+  "description": "Cognitive, somatic, systemic and outdoor coaching by Annemieke. Single sessions, a 6 months program and a year program.",
+  "telephone": "+31625443571",
+  "founder": {"@type": "Person", "name": "Annemieke", "jobTitle": "Coach"},
+  "areaServed": "NL",
+  "serviceType": ["Cognitive coaching", "Systemic coaching", "Family constellation", "Outdoor coaching"]
+}
+</script>
 <style>
+  @font-face{font-family:'Fraunces';font-style:normal;font-weight:100 900;font-display:swap;src:url(/fonts/fraunces.woff2) format('woff2')}
+  @font-face{font-family:'Newsreader';font-style:normal;font-weight:200 800;font-display:swap;src:url(/fonts/newsreader.woff2) format('woff2')}
   :root{
     --cream:#f4f1ec;
     --blush:#ebdad2;
     --olive:#717254;
     --olive-dark:#5e5f45;
-    --ink:#6b6c52;
-    --text:#7a7b63;
+    --ink:#5a5b43;
+    --text:#5a5b43;
     --line:#a8988c;
     --white:#fbf9f5;
     --heading:'Fraunces', Georgia, serif;
@@ -23,19 +55,24 @@
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
   body{margin:0;background:var(--cream);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
   img{max-width:100%;display:block}
   a{color:inherit}
+  a:focus-visible,button:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+  .skip{position:absolute;left:-9999px;top:8px;background:var(--olive);color:var(--white);padding:8px 14px;border-radius:8px;z-index:10}
+  .skip:focus{left:8px}
+  .review{margin:0}.review blockquote{margin:0}
   .wrap{max-width:1240px;margin:0 auto;padding:0 64px}
   h1,h2,h3{font-family:var(--heading);color:var(--olive);margin:0;font-weight:500}
 
-  .btn{display:inline-block;font-family:var(--body);font-size:15px;letter-spacing:.06em;text-transform:uppercase;text-decoration:underline;text-underline-offset:3px;color:var(--olive);border:1.5px solid var(--olive);border-radius:12px;padding:8px 22px;background:transparent;cursor:pointer;transition:background .2s,color .2s}
+  .btn{display:inline-block;font-family:var(--body);font-size:15px;letter-spacing:.06em;text-transform:uppercase;text-decoration:underline;text-underline-offset:3px;color:var(--ink);border:1.5px solid var(--olive);border-radius:12px;padding:8px 22px;background:transparent;cursor:pointer;transition:background .2s,color .2s}
   .btn:hover{background:var(--olive);color:var(--cream)}
 
   /* Hero */
   .hero{padding:110px 0 90px}
   .hero-top{display:grid;grid-template-columns:400px 1fr;gap:48px;align-items:center}
-  .blob{width:100%;aspect-ratio:1/1;object-fit:cover}
+  .blob{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover}
   .hero h1{font-weight:800;font-size:clamp(38px,5.2vw,68px);line-height:1.02;text-align:center;letter-spacing:-.01em}
   .hero p{max-width:760px;margin:40px auto 0;text-align:center;font-size:clamp(18px,2vw,24px);line-height:1.6;color:var(--text)}
 
@@ -47,7 +84,7 @@
   .icon{width:96px;height:96px;border:2.5px solid var(--olive);border-radius:50%;display:grid;place-items:center;margin-bottom:20px}
   .icon svg{width:58px;height:58px;stroke:var(--olive);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
   .offer-body{border-left:1.5px solid var(--line);padding:6px 0 4px 24px;height:calc(100% - 116px)}
-  .offer h3{font-size:22px;font-weight:600;margin-bottom:18px}
+  .offer h3{font-size:22px;font-weight:600;margin-bottom:18px;color:var(--ink)}
   .offer p{margin:0 0 22px;font-size:16.5px}
   .offer ul{margin:0;padding-left:20px;font-size:16.5px}
   .offer li{margin-bottom:6px}
@@ -57,7 +94,7 @@
   .about-grid{display:grid;grid-template-columns:330px 1fr;gap:84px;align-items:center}
   .about-left{text-align:center}
   .about h2{color:var(--white);font-size:clamp(34px,3.6vw,48px);margin-bottom:24px}
-  .about-photo{border-radius:44px;width:100%;aspect-ratio:182/249;object-fit:cover}
+  .about-photo{border-radius:44px;width:100%;height:auto;aspect-ratio:182/249;object-fit:cover}
   .about-text p{margin:0 0 26px;font-size:18px;text-align:justify;hyphens:auto}
   .about-text p:last-child{margin-bottom:0}
 
@@ -65,7 +102,7 @@
   .approaches{padding:80px 0 80px}
   .approaches h2{font-size:clamp(32px,3.8vw,50px);margin-bottom:44px}
   .approach-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:72px}
-  .approach img{width:100%;aspect-ratio:141/149;object-fit:cover;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+  .approach img{width:100%;height:auto;aspect-ratio:141/149;object-fit:cover;box-shadow:0 1px 3px rgba(0,0,0,.08)}
   .approach h3{font-size:24px;font-weight:600;margin:28px 0 18px}
   .approach p{margin:0;font-size:16px}
 
@@ -85,7 +122,7 @@
   .phone{text-align:center;margin-bottom:34px}
   .phone strong{display:block;font-family:var(--heading);font-weight:600;font-size:21px;margin-bottom:4px}
   .phone a{text-decoration:none;font-size:19px;letter-spacing:.03em}
-  .house{border-radius:72px;width:100%;aspect-ratio:304/327;object-fit:cover}
+  .house{border-radius:72px;width:100%;height:auto;aspect-ratio:304/327;object-fit:cover}
 
   form{max-width:440px;margin:0 auto;display:grid;gap:14px}
   label{font-family:var(--heading);font-size:15px;font-weight:500;display:block;margin-bottom:4px}
@@ -125,17 +162,19 @@
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
 <header class="hero">
   <div class="wrap">
     <div class="hero-top">
-      <img class="blob" src="img/hero.jpg" alt="Annemieke smiling in a white blouse, standing by a wooden fence in a meadow">
+      <img class="blob" src="img/hero.webp" width="408" height="406" fetchpriority="high" alt="Annemieke smiling in a white blouse, standing by a wooden fence in a meadow">
       <h1>What if you got curious, about what you’re not seeing yet?</h1>
     </div>
     <p>Hi, I'm Annemieke. I help you uncover what's really driving your choices, through cognitive and systemic work. We look at the patterns that may be holding you back, and find a way forward that feels right for you.</p>
   </div>
 </header>
 
+<main id="main">
 <section class="work" id="work">
   <div class="wrap">
     <div class="work-head">
@@ -186,7 +225,7 @@
   <div class="wrap about-grid">
     <div class="about-left">
       <h2>About me</h2>
-      <img class="about-photo" src="img/about.jpg" alt="Portrait of Annemieke laughing in a field">
+      <img class="about-photo" src="img/about.webp" width="326" height="445" decoding="async" loading="lazy" alt="Portrait of Annemieke laughing in a field">
     </div>
     <div class="about-text">
       <p>Hey! Good to see you here.</p>
@@ -204,22 +243,22 @@
     <h2>Coaching approaches</h2>
     <div class="approach-grid">
       <article class="approach">
-        <img src="img/cognitive.jpg" alt="Woman sitting on a hill looking out over a city at sunrise" loading="lazy">
+        <img src="img/cognitive.webp" width="252" height="267" decoding="async" alt="Woman sitting on a hill looking out over a city at sunrise" loading="lazy">
         <h3>Cognitive</h3>
         <p>The stories you tell yourself shape more than you might realize. Together, we explore the thoughts and beliefs behind your choices, where they may have come from, and where there is space to see things differently and make new choices.</p>
       </article>
       <article class="approach">
-        <img src="img/somatic.jpg" alt="Close-up of apples and leaves" loading="lazy">
+        <img src="img/somatic.webp" width="249" height="267" decoding="async" alt="Close-up of apples and leaves" loading="lazy">
         <h3>Somatic</h3>
         <p>Not everything can be understood by thinking it through. Through breathwork, visualization and body awareness, we slow down and listen to what your body might be telling you, sometimes before you have the words for it.</p>
       </article>
       <article class="approach">
-        <img src="img/systemic.jpg" alt="Old family photographs spread on a table" loading="lazy">
+        <img src="img/systemic.webp" width="247" height="267" decoding="async" alt="Old family photographs spread on a table" loading="lazy">
         <h3>Systemic</h3>
         <p>Some patterns make more sense when we look beyond the individual. We explore how family history, relationships and the systems you are part of may shape the way you think, feel and act. Becoming aware of these patterns creates space to decide what still belongs to you, and what you’re ready to leave behind.</p>
       </article>
       <article class="approach">
-        <img src="img/outdoor.jpg" alt="Misty pine forest" loading="lazy">
+        <img src="img/outdoor.webp" width="248" height="267" decoding="async" alt="Misty pine forest" loading="lazy">
         <h3>Outdoor</h3>
         <p>Sometimes, stepping outside helps something shift inside. Away from screens, routines and four walls, nature creates space to slow down, clear your mind and reconnect with yourself. Walking side by side can also make it easier to open up and let the conversation unfold naturally.</p>
       </article>
@@ -231,17 +270,17 @@
   <div class="wrap">
     <h2>Reviews</h2>
     <div class="review-grid">
-      <figure class="review" style="margin:0">
+      <figure class="review">
         <svg class="badge" viewBox="0 0 60 66" aria-hidden="true"><path d="M30 3l5 4 6-1 3 5 6 2-1 6 4 5-4 5 1 6-6 2-3 5-6-1-5 4-5-4-6 1-3-5-6-2 1-6-4-5 4-5-1-6 6-2 3-5 6 1z"/><circle cx="30" cy="25" r="11"/><path d="M25 25l4 4 7-7"/><path d="M19 42 12 60l8-3 4 7 6-15"/><path d="M41 42l7 18-8-3-4 7-6-15"/></svg>
-        <blockquote style="margin:0"><p>Annemiek is your sparring partner and biggest cheerleader rolled into one. A strategic thinker with the empathy of a golden retriever (minus the drool). She doesn't just listen, she truly hears what you're saying. She reads between the lines and translates my business insights as if it were the most natural thing in the world. And the best part? Before you know it, you're doing a salsa twirl in the middle of a meeting. Miek, you bring the energy, get everyone into the right flow, and make work cool! So glad I got to know you 🎉.</p></blockquote>
+        <blockquote><p>Annemiek is your sparring partner and biggest cheerleader rolled into one. A strategic thinker with the empathy of a golden retriever (minus the drool). She doesn't just listen, she truly hears what you're saying. She reads between the lines and translates my business insights as if it were the most natural thing in the world. And the best part? Before you know it, you're doing a salsa twirl in the middle of a meeting. Miek, you bring the energy, get everyone into the right flow, and make work cool! So glad I got to know you 🎉.</p></blockquote>
       </figure>
-      <figure class="review" style="margin:0">
+      <figure class="review">
         <svg class="badge" viewBox="0 0 60 66" aria-hidden="true"><path d="M30 3l5 4 6-1 3 5 6 2-1 6 4 5-4 5 1 6-6 2-3 5-6-1-5 4-5-4-6 1-3-5-6-2 1-6-4-5 4-5-1-6 6-2 3-5 6 1z"/><circle cx="30" cy="25" r="11"/><path d="M25 25l4 4 7-7"/><path d="M19 42 12 60l8-3 4 7 6-15"/><path d="M41 42l7 18-8-3-4 7-6-15"/></svg>
-        <blockquote style="margin:0"><p>I did a number of private coaching sessions with Annemiek, at my own request. I expected she could help me further with a coaching question focused on focus. That expectation was met. Annemiek is incredibly good at listening and comes up with exactly the question or observation you didn't see coming. She also uses tools like visualization very naturally. The insight I gained from it still echoes in my head every week, and helps me to get focused. Thank you, Annemiek, also for the safe setting you managed to create during the sessions!</p></blockquote>
+        <blockquote><p>I did a number of private coaching sessions with Annemiek, at my own request. I expected she could help me further with a coaching question focused on focus. That expectation was met. Annemiek is incredibly good at listening and comes up with exactly the question or observation you didn't see coming. She also uses tools like visualization very naturally. The insight I gained from it still echoes in my head every week, and helps me to get focused. Thank you, Annemiek, also for the safe setting you managed to create during the sessions!</p></blockquote>
       </figure>
-      <figure class="review" style="margin:0">
+      <figure class="review">
         <svg class="badge" viewBox="0 0 60 66" aria-hidden="true"><path d="M30 3l5 4 6-1 3 5 6 2-1 6 4 5-4 5 1 6-6 2-3 5-6-1-5 4-5-4-6 1-3-5-6-2 1-6-4-5 4-5-1-6 6-2 3-5 6 1z"/><circle cx="30" cy="25" r="11"/><path d="M25 25l4 4 7-7"/><path d="M19 42 12 60l8-3 4 7 6-15"/><path d="M41 42l7 18-8-3-4 7-6-15"/></svg>
-        <blockquote style="margin:0"><p>Annemiek has given me so much, both professionally and personally. She truly listens, asks the right questions, and has a gentle way of bringing clarity to situations. On top of that, she offers practical tools you can actually put to use. What I really appreciate is that Annemiek doesn't tell you what to do, but helps you arrive at your own insights and answers. She is warm, caring, and genuinely interested. With her, it feels safe to talk about anything, whether it's work, choices I have to make, or things that are on my mind personally. My conversations with Annemiek give me insight, direction, and sometimes just the nudge I need. To this day, I get so much out of her guidance, and I'm very grateful to her for it!</p></blockquote>
+        <blockquote><p>Annemiek has given me so much, both professionally and personally. She truly listens, asks the right questions, and has a gentle way of bringing clarity to situations. On top of that, she offers practical tools you can actually put to use. What I really appreciate is that Annemiek doesn't tell you what to do, but helps you arrive at your own insights and answers. She is warm, caring, and genuinely interested. With her, it feels safe to talk about anything, whether it's work, choices I have to make, or things that are on my mind personally. My conversations with Annemiek give me insight, direction, and sometimes just the nudge I need. To this day, I get so much out of her guidance, and I'm very grateful to her for it!</p></blockquote>
       </figure>
     </div>
     <div class="cta"><a class="btn" href="#contact">Let's connect</a></div>
@@ -271,9 +310,10 @@
         <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
       </form>
     </div>
-    <img class="house" src="img/house.jpg" alt="Brick farmhouse with an olive tree in a pot and a wooden bench" loading="lazy">
+    <img class="house" src="img/house.webp" width="543" height="584" decoding="async" alt="Brick farmhouse with an olive tree in a pot and a wooden bench" loading="lazy">
   </div>
 </section>
+</main>
 
 <footer>© <span id="year">2026</span> Nouvo Consultancy · Annemieke</footer>
 
@@ -301,6 +341,16 @@
     } finally { btn.disabled = false; if (window.hcaptcha) hcaptcha.reset(); }
   });
 </script>
-<script src="https://web3forms.com/client/script.js" async defer></script>
+<script>
+  // Load the Web3Forms/hCaptcha script only when the contact form comes near the screen.
+  (function(){
+    let loaded=false;
+    const load=()=>{ if(loaded) return; loaded=true; const sc=document.createElement('script'); sc.src='https://web3forms.com/client/script.js'; sc.async=true; document.body.appendChild(sc); };
+    const target=document.getElementById('contact');
+    if('IntersectionObserver' in window){ const io=new IntersectionObserver(e=>{ if(e.some(x=>x.isIntersecting)){ load(); io.disconnect(); } },{rootMargin:'600px'}); io.observe(target); }
+    else load();
+    form.addEventListener('focusin', load, {once:true});
+  })();
+</script>
 </body>
 </html>
