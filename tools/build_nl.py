@@ -23,7 +23,7 @@ EXACT = [
      '<meta name="description" content="Cognitieve en systemische coaching met Annemieke. Losse sessies, een traject van 6 maanden of een jaartraject met familieopstelling. Live, online of buiten.">'),
     ('<link rel="canonical" href="https://nouvoconsultancy.com/">', '<link rel="canonical" href="https://nouvoconsultancy.com/nl/">'),
     ('<meta property="og:title" content="What if you got curious, about what you’re not seeing yet?">',
-     '<meta property="og:title" content="Wat als je nieuwsgierig wordt naar wat je nog niet ziet?">'),
+     '<meta property="og:title" content="Wat zie jij nog niet?">'),
     ('<meta property="og:description" content="Cognitive and systemic coaching with Annemieke. Single sessions, a 6 months program or a year program, in person, online or outdoors.">',
      '<meta property="og:description" content="Cognitieve en systemische coaching met Annemieke. Losse sessies, een traject van 6 maanden of een jaartraject, live, online of buiten.">'),
     ('<meta property="og:url" content="https://nouvoconsultancy.com/">', '<meta property="og:url" content="https://nouvoconsultancy.com/nl/">'),
@@ -54,7 +54,7 @@ EXACT = [
 
 # Text nodes: English start of the text -> full Dutch text.
 TEXT = [
-    ("What if you got curious", "Wat als je nieuwsgierig wordt naar wat je nog niet ziet?"),
+    ("What if you got curious", "Wat zie jij nog niet?"),
     ("Hi, I'm Annemieke.", "Hoi, ik ben Annemieke. Ik help je ontdekken wat je keuzes écht drijft, met cognitief en systemisch werk. We kijken naar de patronen die je misschien tegenhouden en vinden een weg vooruit die goed voelt voor jou."),
     ("How we can work together.", "Zo kunnen we samenwerken."),
     ("I'm interested", "Ik heb interesse"),
